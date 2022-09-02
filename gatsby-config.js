@@ -1,20 +1,20 @@
-require(`dotenv`).config()
+require(`dotenv`).config();
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.js
-    siteTitle: `Minimal Blog`,
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
-    siteHeadline: `Minimal Blog - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://minimal-blog.lekoarts.de`,
+    siteTitle: `DUCKELOPER.dev`,
+    siteTitleAlt: `DUCKELOPER.dev`,
+    siteHeadline: `DUCKELOPER.dev`,
+    siteUrl: `https://duckeloper.dev`,
     siteDescription: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and line highlighting.`,
-    siteLanguage: `en`,
+    siteLanguage: `KR`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@duckeloper`,
   },
   plugins: [
     {
@@ -34,7 +34,7 @@ module.exports = {
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://twitter.com/duckeloper`,
           },
           {
             name: `Homepage`,
@@ -109,8 +109,8 @@ module.exports = {
           {
             serialize: ({ query: { site, allPost } }) =>
               allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+                const url = site.siteMetadata.siteUrl + post.slug;
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`;
 
                 return {
                   title: post.title,
@@ -119,7 +119,7 @@ module.exports = {
                   url,
                   guid: url,
                   custom_elements: [{ "content:encoded": content }],
-                }
+                };
               }),
             query: `
               {
@@ -149,4 +149,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
