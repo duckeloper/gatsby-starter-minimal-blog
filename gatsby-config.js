@@ -41,6 +41,7 @@ module.exports = {
             url: `https://www.lekoarts.de?utm_source=minimal-blog&utm_medium=Starter`,
           },
         ],
+        formatString: YYYY.MM.DD,
       },
     },
     {
